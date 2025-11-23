@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu & Course Info Demo</title>
+</head>
+
+<body>
+
+    <h2>College Website</h2>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li class="menu">Home</li>
+            <li class="menu">About</li>
+            <li class="menu">Courses</li>
+            <li class="menu">Contact</li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <!-- Paragraph for course information -->
+    <p id="courseInfo">Old course information here...</p>
+
+    <script>
+        // A) Change all menu items to blue
+        const items = document.querySelectorAll(".menu");
+        items.forEach(item => {
+            item.style.color = "blue";
+        });
+
+        // B) Update the paragraph text
+        document.getElementById("courseInfo").textContent =
+            "Course details will be updated soon";
+    </script>
+
+</body>
+</html>

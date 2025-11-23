@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Change</title>
+  </head>
+  <body>
+    <input type="file" id="file"></br>
+    <image id="preview" width="200" height="200"></image>
+    <script>
+    document.getElementById("file").addEventListener("change",function()
+    {
+  let file=this.files[0];
+  let url=URL.createObjectURL(file);
+  document.getElementById("preview").src=url;
+    });
+</script> 
+  </body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+
+    <h2>My To-Do List</h2>
+
+    <!-- Input and Button -->
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addBtn">Add Task</button>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <script>
+        // Select elements
+        const input = document.getElementById("taskInput");
+        const button = document.getElementById("addBtn");
+        const list = document.getElementById("taskList");
+
+        // Add event listener to the button
+        button.addEventListener("click", function () {
+
+            // Get text from input box
+            const taskText = input.value.trim();
+
+            // Only add if text is not empty
+            if (taskText !== "") {
+
+                // Create a new <li> element
+                const li = document.createElement("li");
+
+                // Set its text
+                li.textContent = taskText;
+
+                // Append to the <ul>
+                list.appendChild(li);
+
+                // Clear input box
+                input.value = "";
+            }
+        });
+    </script>
+
+</body>
+</html>
